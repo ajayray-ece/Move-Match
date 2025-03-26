@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move & Match</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="LOgo.jpg">
+</head>
+<body>
+    <div class="instruction-modal" id="instruction-modal">
+        <div class="modal-content">
+            <h2>How to Play</h2>
+            <div class="instructions">
+                <p>1. Select a difficulty level (3x3, 4x4, or 5x5)</p>
+                <p>2. Click on any tile adjacent to the empty space to move it</p>
+                <p>3. Arrange the numbers in ascending order from left to right, top to bottom</p>
+                <p>4. The empty space should be at the end</p>
+                <p>5. Try to solve it in minimum moves and time!</p>
+            </div>
+            <button id="start-game">Start Game</button>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Move & Match</h1>
+        <div class="difficulty-selector">
+            <button class="difficulty-btn active" data-size="3">3x3</button>
+            <button class="difficulty-btn" data-size="4">4x4</button>
+            <button class="difficulty-btn" data-size="5">5x5</button>
+        </div>
+        <div class="game-info">
+            <div class="stats">
+                <span>Moves: <span id="move-counter">0</span></span>
+                <span>Time: <span id="timer">00:00</span></span>
+            </div>
+            <button id="reset-button">Reset Game</button>
+        </div>
+        <div class="puzzle-container">
+            <div class="puzzle-grid" id="puzzle-grid"></div>
+        </div>
+        <div id="congrats-message" class="hidden">
+            <h2>Congratulations! 🎉</h2>
+            <p>You solved the puzzle in <span id="final-moves">0</span> moves!</p>
+            <p>Time: <span id="final-time">00:00</span></p>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+    <div class="copyright">
+        © 2025 <span>Ajay Ray</span>. All rights reserved.
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
